@@ -1,3 +1,7 @@
+.App{
+ background: rgb(255,255,255);
+ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(67,111,148,1) 49%, rgba(205,205,205,1) 100%) !important;
+}
 .navbar{
  background-color: #3a3089;
  color: #fff !important;
@@ -8,4 +12,16 @@
 .nav-link.active{
  font-weight: 700;
  color: crimson !important;
+}
+.home-slider, .home-review, .home-service{
+ border: 2px solid crimson;
+ margin-top: 2rem;
+ margin-bottom: 2rem;
+}
+footer section{
+ background-color: #3a3089;
+ color: #fff !important;
+}
+footer .copyright {
+ background-color: #13102e;
 }

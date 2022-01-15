@@ -19,6 +19,7 @@ function NavBar() {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-auto">
         <Nav.Link className='px-5' href="#home">Home</Nav.Link>
+        <Nav.Link className='px-5' href="#home">Services</Nav.Link>
         <NavDropdown className='px-5' title="Student" id="basic-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">Student Profiles</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">Student Bookings</NavDropdown.Item>
