@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row, Col, Card, Container, ListGroup } from 'react-bootstrap'
+import { Row, Col, Card, Container} from 'react-bootstrap'
 import home1 from '../Utils/Images/home1.jpg'
 import home2 from '../Utils/Images/home2.jpg'
 import home3 from '../Utils/Images/home3.jpg'
@@ -35,7 +35,7 @@ function Home() {
     }
   }
   return (
-    <>
+    <div className='home'>
       <Container className='home-slider'>
       <h2 className='mb-3' style={{ textAlign: 'center', color: '#3a3089' }}><span style={{ color: 'crimson', fontSize: '50px', borderBottom: "5px dotted #3a3089" }}>&#62;</span>Home And Dome</h2>
       <h5 className='mb-3' style={{ textAlign: 'center', color: 'crimson' }}>Best place to find the perfect home away from home for students in a new city!!!</h5>
@@ -146,7 +146,7 @@ function Home() {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   )
 }
 

@@ -1,6 +1,9 @@
 .App{
  background: rgb(255,255,255);
+}
+.home{
  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(67,111,148,1) 49%, rgba(205,205,205,1) 100%) !important;
+ padding: 1rem;
 }
 .navbar{
  background-color: #3a3089;
@@ -24,4 +27,7 @@ footer section{
 }
 footer .copyright {
  background-color: #13102e;
+}
+.form-card{
+ background-color:  rgb(213, 213, 255) !important;
 }

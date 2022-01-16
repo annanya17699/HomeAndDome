@@ -1,7 +1,9 @@
 import React from 'react'
 import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap'
+import { useHistory } from 'react-router-dom'
 import logo from '../Utils/Images/logo.png'
 function NavBar() {
+  const history=useHistory()
  return (
   <>
   <Navbar expand="lg">
@@ -18,17 +20,17 @@ function NavBar() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-auto">
-        <Nav.Link className='px-5' href="#home">Home</Nav.Link>
-        <Nav.Link className='px-5' href="#home">Services</Nav.Link>
+        <Nav.Link className='px-5' onClick={()=>history.push('/')}>Home</Nav.Link>
+        <Nav.Link className='px-5' onClick={()=>history.push('/services')}>Services</Nav.Link>
         <NavDropdown className='px-5' title="Student" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Student Profiles</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Student Bookings</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=>history.push('/student')}>Student Profiles</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=>history.push('/student/form')}>Student Bookings</NavDropdown.Item>
         </NavDropdown>
         <NavDropdown className='px-5' title="Owner" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Owner Profiles</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Owner Housings</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=>history.push('/owner')}>Owner Profiles</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=>history.push('/owner/form')}>Owner Housings</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link className='px-5' href="#home">About Us</Nav.Link>
+        <Nav.Link className='px-5' onClick={()=>history.push('/about')}>About Us</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
