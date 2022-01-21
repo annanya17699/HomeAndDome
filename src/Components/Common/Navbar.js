@@ -21,16 +21,10 @@ function NavBar() {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-auto">
         <Nav.Link className='px-5' onClick={()=>history.push('/')}>Home</Nav.Link>
-        <Nav.Link className='px-5' onClick={()=>history.push('/services')}>Services</Nav.Link>
-        <NavDropdown className='px-5' title="Student" id="basic-nav-dropdown">
-          <NavDropdown.Item onClick={()=>history.push('/student')}>Student Profiles</NavDropdown.Item>
-          <NavDropdown.Item onClick={()=>history.push('/student/form')}>Student Bookings</NavDropdown.Item>
-        </NavDropdown>
-        <NavDropdown className='px-5' title="Owner" id="basic-nav-dropdown">
-          <NavDropdown.Item onClick={()=>history.push('/owner')}>Owner Profiles</NavDropdown.Item>
-          <NavDropdown.Item onClick={()=>history.push('/owner/form')}>Owner Housings</NavDropdown.Item>
-        </NavDropdown>
+        <Nav.Link className='px-5' onClick={()=>history.push('/housings')}>Housings</Nav.Link>
+        <Nav.Link className='px-5' onClick={()=>history.push('/owner')}>Owner</Nav.Link>
         <Nav.Link className='px-5' onClick={()=>history.push('/about')}>About Us</Nav.Link>
+        <Nav.Link className='px-5' onClick={()=>history.push('/signup')}>Authenticate</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>

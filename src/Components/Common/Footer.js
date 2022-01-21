@@ -26,7 +26,10 @@ function Footer() {
         <a href="#!" className="text-reset">Owner</a>
        </p>
        <p>
-        <a href="#!" className="text-reset">User</a>
+        <a href="#!" className="text-reset">About Us</a>
+       </p>
+       <p>
+        <a href="#!" className="text-reset">Housings</a>
        </p>
        <p>
         <a href="#!" className="text-reset">Services</a>
@@ -38,13 +41,10 @@ function Footer() {
        <h6 className="text-uppercase fw-bold mb-4">
         Contact
        </h6>
-       <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
+       <p>Annanya / Kunal Aggarwal / Utpal / Hritick Chourasia</p>
        <p>
-        <i className="fas fa-envelope me-3"></i>
-        info@example.com
+        annanya17699@gmail.com / kunalcse2022@gmail.com / 08utpal@gmail.com / hritick@gmail.com
        </p>
-       <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
-       <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
       </div>
 
      </div>
@@ -54,7 +54,7 @@ function Footer() {
 
    <div className="copyright text-center text-white p-4">
     © 2021 Copyright: &nbsp;
-    <span className='fw-bold text-light'>annanya17699@gmail.com , kunalcse2022@gmail.com</span>
+    <span className='fw-bold text-light'>annanya17699@gmail.com , kunalcse2022@gmail.com , 08utpal@gmail.com</span>
    </div>
 
   </footer>

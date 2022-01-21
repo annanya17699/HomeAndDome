@@ -4,7 +4,11 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Footer from './Components/Common/Footer';
 import Home from './Components/Common/Home';
 import NavBar from './Components/Common/Navbar';
-import StudentForm from './Components/Student/StudentForm';
+import Signup from './Components/Auth/Signup';
+import Login from './Components/Auth/Login';
+import OwnerForm from './Components/Owner/OwnerForm';
+import About from './Components/Common/About';
+import Housing from './Components/Owner/Housing';
 function App() {
   return (
     <BrowserRouter>
@@ -15,9 +19,21 @@ function App() {
       <Route exact path='/'>
         <Home/>
       </Route> 
-      <Route exact path='/student/form'>
-        <StudentForm/>
+      <Route exact path='/signup'>
+        <Signup/>
+      </Route>
+      <Route exact path='/login'>
+        <Login/>
       </Route> 
+      <Route exact path='/owner'>
+        <OwnerForm/>
+      </Route> 
+      <Route exact path='/about'>
+        <About/>
+      </Route> 
+      <Route exact path='/housings'>
+        <Housing/>
+      </Route>
       </Switch>
       
       <Footer/>

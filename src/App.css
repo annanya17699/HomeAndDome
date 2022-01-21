@@ -1,7 +1,7 @@
 .App{
  background: rgb(255,255,255);
 }
-.home{
+.home , .about, .housing{
  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(67,111,148,1) 49%, rgba(205,205,205,1) 100%) !important;
  padding: 1rem;
 }
@@ -16,7 +16,7 @@
  font-weight: 700;
  color: crimson !important;
 }
-.home-slider, .home-review, .home-service{
+.home-slider, .home-review, .home-service, .about-inner{
  border: 2px solid crimson;
  margin-top: 2rem;
  margin-bottom: 2rem;
@@ -28,6 +28,23 @@ footer section{
 footer .copyright {
  background-color: #13102e;
 }
+.form-page{
+ text-align: center;
+}
 .form-card{
  background-color:  rgb(213, 213, 255) !important;
+ width:30rem;
+}
+.form-card2{
+ background-color:  rgb(213, 213, 255) !important;
+}
+.input-field{
+ border: 2px solid #3a3089;
+ padding: 0.5rem;
+ color:#13102e;
+ background-color: #fff;
+ border-radius: 20px 20px;
+}
+.PhoneInputInput{
+ border: none;
 }
