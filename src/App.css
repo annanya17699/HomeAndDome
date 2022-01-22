@@ -1,7 +1,7 @@
 .App{
  background: rgb(255,255,255);
 }
-.home , .about, .housing{
+.home , .about, .housings{
  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(67,111,148,1) 49%, rgba(205,205,205,1) 100%) !important;
  padding: 1rem;
 }
@@ -47,4 +47,7 @@ footer .copyright {
 }
 .PhoneInputInput{
  border: none;
+}
+.housings-inner{
+ min-height: 60vh;
 }

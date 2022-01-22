@@ -8,13 +8,12 @@ import Signup from './Components/Auth/Signup';
 import Login from './Components/Auth/Login';
 import OwnerForm from './Components/Owner/OwnerForm';
 import About from './Components/Common/About';
-import Housing from './Components/Owner/Housing';
+import HousingMain from './Components/Owner/HousingMain'
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
     <NavBar/>
-    
     <Switch>
       <Route exact path='/'>
         <Home/>
@@ -32,7 +31,7 @@ function App() {
         <About/>
       </Route> 
       <Route exact path='/housings'>
-        <Housing/>
+        <HousingMain/>
       </Route>
       </Switch>
       
