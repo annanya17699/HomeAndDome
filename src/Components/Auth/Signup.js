@@ -15,7 +15,7 @@ function Signup() {
   const submitHandler=(e)=>{
     e.preventDefault(); 
     console.log(user, phone);
-    <Redirect to="/" />
+    history.push('/')
   }
   return (
     <Container className='my-5 form-page'>
