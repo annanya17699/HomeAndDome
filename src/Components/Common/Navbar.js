@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
+import {AuthContext} from '../Context/context'
 import logo from '../Utils/Images/logo.png'
 function NavBar() {
+  const auth = useContext(AuthContext)
   const history=useHistory()
  return (
   <>
@@ -20,11 +22,19 @@ function NavBar() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-auto">
-        <Nav.Link className='px-5' onClick={()=>history.push('/')}>Home</Nav.Link>
+        {auth.isLoggedIn?
+        <>
+      <Nav.Link className='px-5' onClick={()=>history.push('/')}>Home</Nav.Link>
         <Nav.Link className='px-5' onClick={()=>history.push('/housings')}>Housings</Nav.Link>
         <Nav.Link className='px-5' onClick={()=>history.push('/owner')}>Owner</Nav.Link>
         <Nav.Link className='px-5' onClick={()=>history.push('/about')}>About Us</Nav.Link>
+        <Nav.Link className='px-5' onClick={()=>auth.logout()}>Logout</Nav.Link>
+        </>:
+        <>
+        <Nav.Link className='px-5' onClick={()=>history.push('/')}>Home</Nav.Link>
         <Nav.Link className='px-5' onClick={()=>history.push('/signup')}>Authenticate</Nav.Link>
+        </>
+}
       </Nav>
     </Navbar.Collapse>
   </Container>

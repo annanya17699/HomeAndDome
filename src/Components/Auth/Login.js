@@ -1,21 +1,20 @@
-import React , {useState} from 'react'
+import React , {useState, useContext} from 'react'
 import { Form, Button, Container, Card, Row, Col } from 'react-bootstrap'
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
-import { Redirect, useHistory } from 'react-router-dom'
-
+import { useHistory } from 'react-router-dom'
+import { AuthContext} from '../Context/context'
 function Login() {
+  const auth = useContext(AuthContext);
  const history = useHistory()
   const [user, setuser] = useState({
-    name:'',
+    password:'',
     email:''
   })
-  const [phone, setPhone]= useState()
-
   const submitHandler=(e)=>{
     e.preventDefault(); 
-    console.log(user, phone);
-    history.push('/')
+    console.log(user);
+    //history.push('/')
+    auth.login(user);
   }
   return (
     <Container className='my-5 form-page'>
@@ -30,8 +29,8 @@ function Login() {
               </Col>
               </Row>
             <Row className='mt-3'>
-              <Col>
-                <PhoneInput defaultCountry="IN" placeholder='Phone Number' value={phone} className='input-field' onChange={setPhone}/>
+            <Col>
+               <Form.Control value={user.password} className='input-field' type='password' onChange={(e)=> setuser({...user, password: e.target.value})} placeholder='Password' id='passwordinput'/>
               </Col>
             </Row>
             <Button variant='success' type='submit' className='mt-2'>Submit</Button>
