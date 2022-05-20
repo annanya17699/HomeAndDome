@@ -8,13 +8,13 @@ function Login() {
  const history = useHistory()
   const [user, setuser] = useState({
     name:'',
-    email:''
+    password:''
   })
-  const [phone, setPhone]= useState()
+  
 
   const submitHandler=(e)=>{
     e.preventDefault(); 
-    console.log(user, phone);
+    console.log(user);
     history.push('/')
   }
   return (
@@ -23,17 +23,19 @@ function Login() {
         <Card.Title className='mt-2'>Login</Card.Title>
         <Card.Body>
           <Form onSubmit={(e)=> submitHandler(e)}>
-            <Row className='mt-3'>
+          <Row className='mt-3'>
               <Col>
-                <Form.Control value={user.email} className='input-field' onChange={(e)=>setuser({...user, email:e.target.value})} type="email" placeholder="Email" id='emailinput' />
+                <Form.Control value={user.name} className='input-field' onChange={(e)=>setuser({...user, name:e.target.value})} type="text" placeholder="Name" id='nameinput' />
 
               </Col>
               </Row>
             <Row className='mt-3'>
               <Col>
-                <PhoneInput defaultCountry="IN" placeholder='Phone Number' value={phone} className='input-field' onChange={setPhone}/>
+                <Form.Control value={user.password} className='input-field' onChange={(e)=>setuser({...user, password:e.target.value})} type="Password" placeholder="password" id='passwordinput' />
+
               </Col>
-            </Row>
+              </Row>
+            
             <Button variant='success' type='submit' className='mt-2'>Submit</Button>
           </Form>
         </Card.Body>

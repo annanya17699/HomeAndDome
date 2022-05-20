@@ -8,15 +8,18 @@ function Signup() {
   const history =useHistory()
   const [user, setuser] = useState({
     name:'',
-    email:''
+    email:'',
+    password: '',
+    type: 'none'
   })
-  const [phone, setPhone]= useState()
 
+  const [phone, setPhone]= useState()
   const submitHandler=(e)=>{
     e.preventDefault(); 
     console.log(user, phone);
     history.push('/')
   }
+
   return (
     <Container className='my-5 form-page'>
       <Card className='p-3 mx-auto shadow form-card'>
@@ -35,11 +38,30 @@ function Signup() {
 
               </Col>
               </Row>
-            <Row className='mt-3'>
+
+              <Row className='mt-3'>
+              <Col>
+                <Form.Select value={user.userType} className='input-field' onChange={(e)=>setuser({...user, type:e.target.value})} id='userTypeinput' >
+                <option value="none">None</option>
+                <option value="owner">Owner</option>
+                <option value="renter">Renter</option>
+                </Form.Select>
+                </Col>
+              </Row>
+
+              <Row className='mt-3'>
               <Col>
                 <PhoneInput defaultCountry="IN" placeholder='Phone Number' value={phone} className='input-field' onChange={setPhone}/>
               </Col>
-            </Row>
+              </Row>
+            
+            <Row className='mt-3'>
+              <Col>
+                <Form.Control value={user.password} className='input-field' onChange={(e)=>setuser({...user, password:e.target.value})} type="password" placeholder="Password" id='passwordinput' />
+
+              </Col>
+              </Row>
+
             <Button variant='success' type='submit' className='mt-2'>Submit</Button>
           </Form>
         </Card.Body>
