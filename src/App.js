@@ -9,8 +9,23 @@ import Login from './Components/Auth/Login';
 import OwnerForm from './Components/Owner/OwnerForm';
 import About from './Components/Common/About';
 import HousingMain from './Components/Owner/HousingMain'
+import { AuthContext } from './Components/Context/context';
+import { useState, useCallback } from 'react';
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [user, setUser] = useState()
+  const login = useCallback((user) => {
+    setUser(user);
+   setIsLoggedIn(true)
+  }, []);
+
+  const logout = useCallback(() => {
+    setUser(null)
+    setIsLoggedIn(false)
+  }, []);
   return (
+    <AuthContext.Provider
+    value={{ isLoggedIn:isLoggedIn, user:user, login:login ,logout:logout }}>
     <BrowserRouter>
     <div className="App">
     <NavBar/>
@@ -38,6 +53,7 @@ function App() {
       <Footer/>
     </div>
     </BrowserRouter>
+    </AuthContext.Provider>
   );
 }
 

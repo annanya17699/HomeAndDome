@@ -12,14 +12,12 @@ function Signup() {
     password: '',
     type: 'none'
   })
-
-  const [phone, setPhone]= useState()
+  
   const submitHandler=(e)=>{
     e.preventDefault(); 
-    console.log(user, phone);
+    console.log(user);
     history.push('/')
   }
-
   return (
     <Container className='my-5 form-page'>
       <Card className='p-3 mx-auto shadow form-card'>
@@ -47,12 +45,6 @@ function Signup() {
                 <option value="renter">Renter</option>
                 </Form.Select>
                 </Col>
-              </Row>
-
-              <Row className='mt-3'>
-              <Col>
-                <PhoneInput defaultCountry="IN" placeholder='Phone Number' value={phone} className='input-field' onChange={setPhone}/>
-              </Col>
               </Row>
             
             <Row className='mt-3'>

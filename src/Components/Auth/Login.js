@@ -1,10 +1,10 @@
-import React , {useState} from 'react'
+import React , {useState, useContext} from 'react'
 import { Form, Button, Container, Card, Row, Col } from 'react-bootstrap'
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
-import { Redirect, useHistory } from 'react-router-dom'
-
+import { useHistory } from 'react-router-dom'
+import { AuthContext} from '../Context/context'
 function Login() {
+  const auth = useContext(AuthContext);
  const history = useHistory()
   const [user, setuser] = useState({
     name:'',

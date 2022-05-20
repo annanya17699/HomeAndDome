@@ -3,6 +3,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
 import annanya from '../Utils/Images/annanya.jpg'
 import kunal from '../Utils/Images/kunal.jpg'
 import utpal from '../Utils/Images/utpal.jpeg'
+import hrithik from '../Utils/Images/hrithik.jfif'
 function About() {
  return (
   <div className='about' style={{ textAlign: 'center', color: '#3a3089' }}>
@@ -51,7 +52,7 @@ function About() {
      </Col>
      <Col lg={3}>
      <Card style={{height:'35rem'}} className='my-2 mx-auto'>
-       <Card.Img src={kunal} alt='dev4'/>
+       <Card.Img src={hrithik} alt='dev4'/>
        <Card.Title style={{ color: 'crimson', textTransform: 'uppercase'}}>Hritick Chourasia</Card.Title>
        <Card.Text>
        Role: Frontend Designer
