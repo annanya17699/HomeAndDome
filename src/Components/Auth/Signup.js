@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import { Form, Button, Container, Card, Row, Col } from 'react-bootstrap'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
-import { Redirect, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 function Signup() {
   const history =useHistory()
@@ -12,10 +12,11 @@ function Signup() {
     password: '',
     type: 'none'
   })
-  
+  const [phone, setPhone]= useState()
+
   const submitHandler=(e)=>{
     e.preventDefault(); 
-    console.log(user);
+    console.log(user, phone);
     history.push('/')
   }
   return (
@@ -48,6 +49,9 @@ function Signup() {
               </Row>
             
             <Row className='mt-3'>
+            <Col>
+                <PhoneInput defaultCountry="IN" placeholder='Phone Number' value={phone} className='input-field' onChange={setPhone}/>
+              </Col>
               <Col>
                 <Form.Control value={user.password} className='input-field' onChange={(e)=>setuser({...user, password:e.target.value})} type="password" placeholder="Password" id='passwordinput' />
 
